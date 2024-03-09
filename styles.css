@@ -1,7 +1,17 @@
+/* Adicione estilos ao seletor de linguagem conforme necessário */
+#language-selector {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header, main, footer {
@@ -16,18 +26,30 @@ header {
 }
 
 main {
+    flex-grow: 1;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
 }
 
 #editor-section, #output-section {
-    width: 45%;
+    width: 80%; /* Ajustado para ocupar mais da largura da tela */
+    max-width: 800px; /* Limita a largura para uma melhor legibilidade */
+}
+
+#language-selector, #code-editor {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#language-selector {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
 }
 
 #code-editor {
-    width: 100%;
     height: 300px;
     border: 1px solid #ccc;
 }
